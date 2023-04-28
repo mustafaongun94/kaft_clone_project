@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+
+{% block content  %}
+
+{% include 'home/carousel.html'%}
+
+{% endblock  %}
+    <div class="container mt-4">
+        <div class="row">
+            {% for item in products %}
+            {% if item.cover_image %}
+            <div class="col-sm-3">
+                {% include 'product/category_product.html'%}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>   
+    </div>
